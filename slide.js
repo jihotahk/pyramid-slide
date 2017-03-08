@@ -1,9 +1,4 @@
-/**
- * render Pyramid
- *
- * Determines the symbol and height from user input/change,
- * and then calls pyramid with that symbol and height.
- */
+//gets height and symbol and calls drawPyramid
 function renderPyramid() {
 
     // retrieve the current values of symbol
@@ -17,6 +12,7 @@ function renderPyramid() {
     drawPyramid(height,symbol);
 }
 
+//function to draw the pyramid. Clears previous one
 function drawPyramid(height, symbol) {
     //clear pyramid with each change
     document.getElementById("pyramid").innerHTML = "";
@@ -49,8 +45,16 @@ function drawPyramid(height, symbol) {
    }
 }
 
+//prints the height value for the user to see
+function setHeightValue() {
+    var height = document.getElementById("height-slider").value;
+    var rangeValue = document.getElementById("range-value");
+    rangeValue.innerHTML = height
+}
+
 // draw pyramid initially
 renderPyramid();
+setHeightValue();
 
 //add event listener on brick symbol
 var dropdown = document.getElementById("symbol");
@@ -62,4 +66,5 @@ dropdown.addEventListener("input", function(event) {
 var heightSlider = document.getElementById("height-slider");
 heightSlider.addEventListener("change", function(event) {
   renderPyramid();
+  setHeightValue();
 })
