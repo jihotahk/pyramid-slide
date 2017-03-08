@@ -58,10 +58,8 @@ dropdown.addEventListener("input", function(event) {
   renderPyramid();
 });
 
-/*
-//add event listener on symbol input
-var heightStr = document.getElementById("height-slider")
-object.addEventListener("change", function(event) {
+//add event listener on height slider change
+var heightSlider = document.getElementById("height-slider");
+heightSlider.addEventListener("change", function(event) {
   renderPyramid();
 })
-*/
