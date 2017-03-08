@@ -8,7 +8,7 @@ body {
     width: 80%;
     margin: 0 auto;
     background-color: #f5f0f0;
-    padding: 0 0 3rem 0;
+    padding: 0 0 2rem 0;
   }
 
 main{
@@ -32,13 +32,18 @@ h1{
   padding: 1.5rem;
 }
 
-label{
+label, #range-value{
   font-weight: bold;
   font-size: 1.15rem;
+  padding: 0 .5rem;
 }
 #pyramid {
     line-height: 0;
     font-size: 2rem;
     color: #aa5588;
     padding: 2rem 0;
+}
+
+#height-slider{
+  vertical-align: bottom;
 }
