@@ -5,7 +5,7 @@
  * Determines the current value that the user has typed in the 'How high?' text-box,
  * and then draws a pyramid with that height.
  */
-function determineHeightAndThenDrawPyramid() {
+function renderPyramid() {
 
     // just so we know we're here
     console.log("someone invoked the determineHeightAndThenDrawPyramid function!");
@@ -17,20 +17,25 @@ function determineHeightAndThenDrawPyramid() {
 
 }
 
-
+/**
 // find pyramid div and draw
 var pyramidDiv = document.getElementById("pyramid");
-var pyramid = determineHeightAndThenDrawPyramid();
+var pyramid = DrawPyramid();
 pyramid.appendChild(pyramid)
 //add event listener on brick symbol
 
-//add event listener on height
-button.addEventListener("click", function(event) {
-  determineHeightAndThenDrawPyramid();
+//add event listener on symbol input
+button.addEventListener("input", function(event) {
+  renderPyramid();
 });
 
+//add event listener on height slider change
+var heightStr = document.getElementById("height-slider")
+object.addEventListener("change", function(event) {
+  renderPyramid();
+})
 
-/**
+
  * drawPyramid
  *
  * Renders, in the HTML document, a Mario pyramid of the specified height
