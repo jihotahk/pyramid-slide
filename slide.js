@@ -18,6 +18,9 @@ function renderPyramid() {
 }
 
 function drawPyramid(height, symbol) {
+    //clear pyramid with each change
+    document.getElementById("pyramid").innerHTML = "";
+
 
     for (var row = 0; row < height; row++) {
 
@@ -46,14 +49,16 @@ function drawPyramid(height, symbol) {
    }
 }
 
-// find pyramid div and draw initially
+// draw pyramid initially
 renderPyramid();
-/*
 
 //add event listener on brick symbol
-button.addEventListener("input", function(event) {
+var dropdown = document.getElementById("symbol");
+dropdown.addEventListener("input", function(event) {
   renderPyramid();
 });
+
+/*
 //add event listener on symbol input
 var heightStr = document.getElementById("height-slider")
 object.addEventListener("change", function(event) {
